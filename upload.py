@@ -2,7 +2,7 @@ from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 
 gauth = GoogleAuth()
-gauth.LocalWebserverAuth() # Creates local webserver and auto handles authentication.
+auth_url = gauth.CommandLineAuth() # Create authentication url user needs to visit
 
 # Create GoogleDrive instance with authenticated GoogleAuth instance.
 drive = GoogleDrive(gauth)
