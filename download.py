@@ -9,6 +9,7 @@ drive = GoogleDrive(gauth)
 
 # Cria uma lista com todos os arquivos do google drive
 file_list = drive.ListFile({'q': "'root' in parents and trashed=false"}).GetList()
+
 # Looping que percorre os arquivos da lista e faz download
 for file1 in file_list:
     download_mimetype = None
